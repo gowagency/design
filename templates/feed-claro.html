@@ -1,0 +1,64 @@
+<!-- @dsCard group="Templates" name="Capa de feed — clara (1080×1350)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gow — Capa feed clara</title>
+<style>
+:root{
+  --gow-black:#0B0B0C; --gow-ink:#141416; --gow-graphite:#1E1E20; --gow-smoke:#2B2B2D;
+  --gow-steel:#6F6F6D; --gow-silver:#A6A6A4; --gow-mist:#C9C9C7; --gow-fog:#DEDEDC;
+  --gow-paper:#E9E9E7; --gow-white:#F4F4F2;
+  --gow-font:"Neue Haas Grotesk Display Pro","neue-haas-grotesk-display","Helvetica Now Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a1c;display:flex;justify-content:center;padding:24px;font-family:var(--gow-font)}
+.canvas{width:540px;height:675px;position:relative;overflow:hidden;color:var(--gow-graphite);
+  background:linear-gradient(150deg,#E9E9E7 0%,#DEDEDC 100%)}
+.ghost{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(11,11,12,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(11,11,12,.045) 1px,transparent 1px);
+  background-size:120px 120px}
+.water{position:absolute;width:560px;height:560px;right:-160px;top:60px;opacity:.05}
+.shape{position:absolute;width:300px;height:300px;border-radius:70px;left:-110px;bottom:-130px;background:rgba(201,201,199,.5)}
+.inner{position:absolute;inset:0;padding:32px 42px;display:flex;flex-direction:column;z-index:2}
+.header{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid rgba(11,11,12,.35)}
+.header svg{width:22px;height:22px}
+.header span{font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.middle{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:18px}
+.pill{display:inline-flex;padding:7px 18px;border-radius:999px;font-size:13px;
+  background:rgba(11,11,12,.05);border:1px solid rgba(11,11,12,.22);color:var(--gow-graphite);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 6px 18px rgba(11,11,12,.08)}
+.pill b{font-weight:700}
+h1{font-size:38px;font-weight:300;line-height:1.06;letter-spacing:-.005em}
+h1 b{font-weight:700}
+.obj{width:190px;height:150px;margin-top:10px;position:relative}
+.obj .torus{position:absolute;inset:0;border-radius:50%;transform:rotate(-12deg) scaleY(.62);
+  background:radial-gradient(circle at 32% 28%,#8a8a8c 0%,#3c3c3e 40%,#161618 75%);
+  -webkit-mask:radial-gradient(closest-side,transparent 52%,#000 54%);mask:radial-gradient(closest-side,transparent 52%,#000 54%);
+  box-shadow:0 30px 50px rgba(11,11,12,.25)}
+.cta{display:flex;justify-content:center;align-items:center;gap:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding-bottom:28px}
+.cta b{font-weight:700}
+.tri{width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:7px solid currentColor}
+</style>
+</head>
+<body>
+  <div class="canvas" data-canvas-width="1080" data-canvas-height="1350">
+    <div class="ghost"></div>
+    <div class="shape"></div>
+    <img class="water" src="../assets/g-preto.svg" alt="">
+    <div class="inner">
+      <div class="header">
+        <img src="../assets/g-preto.svg" alt="G" style="width:22px;height:22px">
+        <span>Gow Agency</span>
+      </div>
+      <div class="middle">
+        <span class="pill"><b>gow</b>.agency</span>
+        <h1>A Meta <b>acabou de<br>mudar</b> como anúncios<br>vão ser feitos.</h1>
+        <div class="obj"><div class="torus"></div></div>
+      </div>
+      <div class="cta">Arraste <b>pro lado</b> <span class="tri"></span></div>
+    </div>
+  </div>
+</body>
+</html>

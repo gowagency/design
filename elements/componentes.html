@@ -1,0 +1,79 @@
+<!-- @dsCard group="Elementos" name="Pill, CTAs e Hairlines" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gow — Elementos</title>
+<style>
+:root{
+  --gow-black:#0B0B0C; --gow-ink:#141416; --gow-graphite:#1E1E20; --gow-smoke:#2B2B2D;
+  --gow-steel:#6F6F6D; --gow-silver:#A6A6A4; --gow-mist:#C9C9C7; --gow-fog:#DEDEDC;
+  --gow-paper:#E9E9E7; --gow-white:#F4F4F2;
+  --gow-font:"Neue Haas Grotesk Display Pro","neue-haas-grotesk-display","Helvetica Now Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--gow-font);background:var(--gow-black);color:var(--gow-white);padding:48px;min-height:100vh}
+h1{font-size:15px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gow-silver);margin-bottom:6px}
+.rule{height:1px;background:rgba(244,244,242,.18);margin:18px 0 32px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cell{border-radius:16px;border:1px solid rgba(244,244,242,.08);padding:34px;min-height:170px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;position:relative;overflow:hidden}
+.cell em{font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gow-steel);position:absolute;top:16px;left:20px}
+/* Pill liquid glass */
+.pill{display:inline-flex;align-items:center;padding:9px 22px;border-radius:999px;font-size:16px;letter-spacing:.02em;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.pill b{font-weight:700}
+.pill-dark{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);color:var(--gow-white);box-shadow:inset 0 1px 0 rgba(255,255,255,.15), 0 8px 24px rgba(0,0,0,.35)}
+.pill-light{background:rgba(11,11,12,.05);border:1px solid rgba(11,11,12,.22);color:var(--gow-graphite);box-shadow:inset 0 1px 0 rgba(255,255,255,.6), 0 6px 18px rgba(11,11,12,.08)}
+/* silk demo bg */
+.silk{background:
+  radial-gradient(120% 90% at 20% 10%, #26262a 0%, transparent 55%),
+  radial-gradient(140% 100% at 85% 90%, #1c1c1f 0%, transparent 60%),
+  linear-gradient(160deg,#161618,#0B0B0C)}
+/* CTA */
+.cta{font-size:14px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.cta b{font-weight:700}
+.cta .tri{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid currentColor}
+.cta .tri-down{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid currentColor}
+/* hairline block */
+.block{display:flex;gap:18px;align-items:stretch;max-width:360px}
+.block .vline{width:1px;background:rgba(244,244,242,.4)}
+.block p{font-size:16px;line-height:1.4;color:var(--gow-mist)}
+.block p b{color:var(--gow-white);font-weight:700}
+/* ghost grid */
+.ghost{position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(244,244,242,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(244,244,242,.06) 1px,transparent 1px);
+  background-size:90px 90px}
+</style>
+</head>
+<body>
+  <h1>Elementos recorrentes</h1>
+  <div class="rule"></div>
+
+  <div class="grid">
+    <div class="cell silk">
+      <em>Pill gow.agency · liquid glass · escuro</em>
+      <span class="pill pill-dark"><b>gow</b>.agency</span>
+    </div>
+    <div class="cell" style="background:linear-gradient(155deg,#E9E9E7,#DEDEDC)">
+      <em>Pill · claro</em>
+      <span class="pill pill-light"><b>gow</b>.agency</span>
+    </div>
+    <div class="cell">
+      <em>CTAs de navegação</em>
+      <div class="cta">Arraste <b>pro lado</b> <span class="tri"></span></div>
+      <div class="cta">Leia <b>a legenda</b> <span class="tri-down"></span></div>
+    </div>
+    <div class="cell">
+      <em>Bloco com hairline vertical</em>
+      <div class="block" style="margin-top:14px">
+        <div class="vline"></div>
+        <p>Conheça as soluções que farão seu negócio crescer e nunca mais <b>perder clientes</b>.</p>
+      </div>
+    </div>
+    <div class="cell" style="grid-column:1/-1;min-height:150px">
+      <div class="ghost"></div>
+      <em>Grid fantasma — linhas 1px a 5–8% de opacidade, estilo blueprint</em>
+      <p style="font-size:14px;color:var(--gow-steel);max-width:420px;text-align:center;line-height:1.5">Cruza o layout inteiro por trás do conteúdo. Dá estrutura de engenharia sem chamar atenção.</p>
+    </div>
+  </div>
+</body>
+</html>

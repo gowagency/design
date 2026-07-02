@@ -1,0 +1,64 @@
+<!-- @dsCard group="Fundamentos" name="Logotipo" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gow — Logotipo</title>
+<style>
+:root{
+  --gow-black:#0B0B0C; --gow-ink:#141416; --gow-graphite:#1E1E20; --gow-smoke:#2B2B2D;
+  --gow-steel:#6F6F6D; --gow-silver:#A6A6A4; --gow-mist:#C9C9C7; --gow-fog:#DEDEDC;
+  --gow-paper:#E9E9E7; --gow-white:#F4F4F2;
+  --gow-font:"Neue Haas Grotesk Display Pro","neue-haas-grotesk-display","Helvetica Now Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--gow-font);background:var(--gow-black);color:var(--gow-white);padding:48px;min-height:100vh}
+h1{font-size:15px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--gow-silver);margin-bottom:6px}
+.rule{height:1px;background:rgba(244,244,242,.18);margin:18px 0 32px}
+.note{font-size:13px;color:var(--gow-steel);margin-bottom:28px;max-width:560px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cell{border-radius:16px;border:1px solid rgba(244,244,242,.08);padding:36px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;min-height:220px;position:relative;overflow:hidden}
+.cell em{font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gow-steel);position:absolute;top:16px;left:20px}
+.g{width:72px;height:72px}
+.wordmark{font-size:38px;line-height:1.08;font-weight:300;letter-spacing:.01em}
+.wordmark b{font-weight:700}
+.header-demo{width:100%;display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid rgba(244,244,242,.35)}
+.header-demo .g{width:30px;height:30px}
+.header-demo span{font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+.water{position:absolute;right:-60px;bottom:-80px;width:320px;height:320px;color:var(--gow-white);opacity:.06}
+</style>
+</head>
+<body>
+  <h1>Logotipo &amp; Aplicações</h1>
+  <div class="rule"></div>
+  <p class="note">Monograma oficial em <code>assets/g-branco.svg</code> (fundo escuro) e <code>assets/g-preto.svg</code> (fundo claro). Nunca redesenhar, esticar ou recolorir fora da paleta.</p>
+
+  <div class="grid">
+    <div class="cell">
+      <em>Monograma · escuro</em>
+      <img class="g" src="../assets/g-branco.svg" alt="Monograma G — branco">
+    </div>
+    <div class="cell" style="background:var(--gow-paper)">
+      <em style="color:var(--gow-steel)">Monograma · claro</em>
+      <img class="g" src="../assets/g-preto.svg" alt="Monograma G — preto">
+    </div>
+    <div class="cell">
+      <em>Wordmark empilhado</em>
+      <div class="wordmark"><b>G</b>row<br><b>O</b>wn<br><b>W</b>ay</div>
+    </div>
+    <div class="cell">
+      <em>Header padrão</em>
+      <div class="header-demo" style="margin-top:26px">
+        <img class="g" src="../assets/g-branco.svg" alt="G">
+        <span>Gow Agency</span>
+      </div>
+    </div>
+    <div class="cell" style="grid-column:1/-1;min-height:180px;align-items:flex-start">
+      <em>Marca d'água — G gigante, 4–7% de opacidade, sangrando na borda</em>
+      <img class="water" src="../assets/g-branco.svg" alt="" style="opacity:.06">
+
+      <div style="margin-top:34px;font-size:15px;color:var(--gow-mist);max-width:400px;line-height:1.5">O monograma nunca compete com o conteúdo: aparece cortado, gigante (1.2–1.6× a largura do canvas) e quase invisível.</div>
+    </div>
+  </div>
+</body>
+</html>

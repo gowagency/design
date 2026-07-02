@@ -1,0 +1,53 @@
+<!-- @dsCard group="Templates" name="Story / Reels (1080×1920)" -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Gow — Story</title>
+<style>
+:root{
+  --gow-black:#0B0B0C; --gow-ink:#141416; --gow-graphite:#1E1E20; --gow-smoke:#2B2B2D;
+  --gow-steel:#6F6F6D; --gow-silver:#A6A6A4; --gow-mist:#C9C9C7; --gow-fog:#DEDEDC;
+  --gow-paper:#E9E9E7; --gow-white:#F4F4F2;
+  --gow-font:"Neue Haas Grotesk Display Pro","neue-haas-grotesk-display","Helvetica Now Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#1a1a1c;display:flex;justify-content:center;padding:24px;font-family:var(--gow-font)}
+/* canvas 1080×1920 em meia escala */
+.canvas{width:432px;height:768px;position:relative;overflow:hidden;color:var(--gow-white);background:#0B0B0C}
+.silk .w1,.silk .w2,.silk .w3{position:absolute;border-radius:50%;filter:blur(3px)}
+.silk .w1{width:190%;height:80%;left:-50%;top:-25%;background:radial-gradient(closest-side,rgba(166,166,164,.17),transparent 68%);transform:rotate(-24deg)}
+.silk .w2{width:180%;height:70%;left:-30%;top:30%;background:radial-gradient(closest-side,rgba(110,110,109,.14),transparent 70%);transform:rotate(16deg)}
+.silk .w3{width:170%;height:65%;left:-10%;top:65%;background:radial-gradient(closest-side,rgba(201,201,199,.10),transparent 72%);transform:rotate(-10deg)}
+.grain{position:absolute;inset:0;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.inner{position:absolute;inset:0;padding:88px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;z-index:2}
+.pill{display:inline-flex;padding:6px 16px;border-radius:999px;font-size:12px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 8px 24px rgba(0,0,0,.35)}
+.pill b{font-weight:700}
+.middle{flex:1;display:flex;flex-direction:column;justify-content:center;gap:22px}
+h1{font-size:42px;font-weight:300;text-transform:uppercase;line-height:1.06;letter-spacing:.005em}
+h1 b{font-weight:700}
+.sub{font-size:15px;color:var(--gow-mist)}
+.sub em{font-style:italic}
+.wordmark{font-size:19px;line-height:1.12;font-weight:300;padding-bottom:6px}
+.wordmark b{font-weight:700}
+</style>
+</head>
+<body>
+  <div class="canvas silk" data-canvas-width="1080" data-canvas-height="1920">
+    <div class="w1"></div><div class="w2"></div><div class="w3"></div>
+    <div class="grain"></div>
+    <div class="inner">
+      <span class="pill"><b>gow</b>.agency</span>
+      <div class="middle">
+        <h1>Enquanto<br>você<br><b>espera,</b><br>alguém<br><b>vende!</b></h1>
+        <p class="sub">Anuncie com <em>estratégia</em>,<br>fale conosco.</p>
+      </div>
+      <div class="wordmark"><b>G</b>row<br><b>O</b>wn<br><b>W</b>ay</div>
+    </div>
+  </div>
+</body>
+</html>
